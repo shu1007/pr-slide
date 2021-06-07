@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
+    "pub": "slidev build --base pr-slide && gh-pages -d dist",
     "export": "slidev export"
   },
   "dependencies": {
