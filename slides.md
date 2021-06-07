@@ -26,26 +26,21 @@ info: |
   </span>
 </div>
 
-<a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+<a href="https://sli.dev/" target="_blank" alt="slidev"
   class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
-<carbon-logo-github />
+created by Slidev
 </a>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 
 # 略歴
 
 - 1991 年 10 月 7 日、北海道生まれ
-- 2017 年, 北海道大学理学院数学専攻修士課程を修了
+- 2014 年3月北見工業大学情報システム工学科卒
+- 2017 年3月北海道大学理学院数学専攻修士課程を修了
 - 同年インタープリズム株式会社入社
 - 現在に至る
 
-<br>
-<br>
 
 <style>
 h1 {
@@ -61,9 +56,28 @@ h1 {
 
 ---
 
+# スキル
+
+## プログラミング言語
+
+Java, C#, PHP, JavaScript, TypeScript, Powershell, Bash
+
+## DB
+
+SQL Server, MySQL
+
+## FW
+
+.NET, ASP.NET, Laravel, D3.js, Vue.js React, Next.js... etc
+
+
+***直近はNext.jsでPHP製のWebサービスの共通化、リプレースを担当***
+
+---
+
 # どんなコードを書くのか?
 
-業務以外にブラウザの拡張機能や Slack, discord の bot など同僚や同じ仕事をしている人に少し楽になるようなものを目指していくつかコードを書いてきました。
+業務以外にブラウザの拡張機能や Slack, discord の bot など同僚や同じ仕事をしている人に少し楽になるようなものを目指していくつかコードを書いてきました。いくつかを紹介します。
 
 - レビュー依頼用 Slack アプリ
 - 社内チャットでシンタックスハイライト表示ができるようになる chrome 拡張
@@ -77,15 +91,13 @@ h1 {
 しかし依頼が貯まると依頼されたものがわからなくなった。
 
 <div grid="~ cols-2 gap-4">
-
 <img src="/public/slack_bot2.png" width='350'/>
 <div>
-任意のチャンネルでslash commandで左のイメージのようにモーダルが出現。
+        任意のチャンネルでslash commandで左のイメージのようにモーダルが出現。
 
-タイトル、内容、通知したい相手を選んで送る。
+        タイトル、内容、通知したい相手を選んで送る。
 
-するとチャンネルに入力した内容でメッセージが送信され、メンションされるのでレビュアーはレビューされたことが認識出来ます。
-
+        するとチャンネルに入力した内容でメッセージが送信され、メンションされるのでレビュアーはレビューされたことが認識出来ます。
 </div>
 </div>
 
@@ -104,16 +116,19 @@ appの画面からレビュー依頼したもの、されたものが表示さ�
     <source src="/public/slack_bot.mp4" type="video/mp4">
 </video>
 </div>
+<a href="https://github.com/shu1007/request-review-slack-bot" target="_blank" alt="GitHub"
+  class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
+<carbon-logo-github />
+</a>
 
 ---
 
-# 社内チャット用Chrome拡張
+# 社内チャット用 Chrome 拡張
 
 関連会社製のチャットツールが社内で使用されており業務のメッセージのやり取りにも使われている。<br/>
-Slack等になれていると少し辛いが、チームで使用している人もいるのでちょっとでも便利に使えるようにシンタックスハイライトができるchrome拡張を作りました。
+Slack 等になれていると少し辛いが、チームで使用している人もいるのでちょっとでも便利に使えるようにシンタックスハイライトができる chrome 拡張を作りました。
 
 <div grid="~ cols-2 gap-2" m="-t-2">
-
 
 <div>Before</div>
 <div>After</div>
@@ -121,142 +136,52 @@ Slack等になれていると少し辛いが、チームで使用している人
 <img border="rounded" src="/public/sg_before.png">
 
 <img border="rounded" src="/public/sg_after.png">
-
 </div>
-
+<a href="https://github.com/shu1007/sg-code-highlighter" target="_blank" alt="GitHub"
+  class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
+<carbon-logo-github />
+</a>
 
 ---
 
-## preload: false
 
-# Animations
+# discord bot
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+discord を普段の連絡で使用しており、voice channel にちょっとした離席時に誰かが話しかけてきた場合、それに気づくことができません。そこで以下のようなbotを作りました。
 
-```html
-<div v-motion :initial="{ x: -80 }" :enter="{ x: 0 }">Slidev</div>
-```
+- text channel に voice channel を登録
+- その voice channel で誰かが mic の mute を ON にした場合に text channel に通知を送る
 
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
 
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
+<style>
+video {
+margin: 0 auto;
 }
-</script>
+</style>
 
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+<video controls autoplay='true' muted='true' loop='true' width='500'>
+    <source src="/public/discord-bot.mp4" type="video/mp4">
+</video>
 
-[Learn More](https://sli.dev/guide/animations.html#motion)
+<a href="https://github.com/shu1007/discord-speaker-log" target="_blank" alt="GitHub"
+  class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
+<carbon-logo-github />
+</a>
+---
 
-</div>
+# その他
+
+- 社内の技術ブログに寄稿
+    - http://interprism.hatenablog.com/entry/2021/05/14/094339
+- ハッカソンに参加
+    - 2019年10月5日にサポーターズCoLabさん主催のビアッカソンというハッカソンイベントに参加
+    - 良いメンバーと出会えて優勝出来た
+    - https://note.com/spzcolab/n/n1ef7ae944fe0
+- OSS活動
+    - PHP製のSQLパーサーがコメントありのパースしたものからSQLが生成出来ないため、コメントを除くオプションを追加
+    - 放置されている。。。
+    - https://github.com/greenlion/PHP-SQL-Parser/pull/330
 
 ---
 
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-2 gap-4 pt-4 -mb-6">
-
-```mermaid {scale: 0.9}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-
-layout: center
-class: text-center
-
----
-
-# Learn More
-
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+-
