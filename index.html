@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/pr-slide/assets/f16965043a9db39096ecfb63f3f4ae39.a02f38e2.png">
-  
+
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=PT+Mono&display=swap" rel="stylesheet">
 <script type="module" crossorigin src="/pr-slide/assets/index.9d404b45.js"></script>
   <link rel="modulepreload" href="/pr-slide/assets/vendor.0e15f211.js">
   <link rel="stylesheet" href="/pr-slide/assets/vendor.d51ddfff.css">
+
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
 </head>
 <body>
   <div id="app"></div>
-  
-  
+
+
 </body>
 </html>
