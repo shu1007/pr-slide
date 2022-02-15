@@ -10,10 +10,10 @@ class: 'text-center'
 highlighter: shiki
 # some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+    ## Slidev Starter Template
+    Presentation slides for developers.
 
-  Learn more at [Sli.dev](https://sli.dev)
+    Learn more at [Sli.dev](https://sli.dev)
 ---
 
 # 自己紹介
@@ -35,12 +35,11 @@ created by Slidev
 
 # 略歴
 
-- 1991 年 10 月 7 日、北海道生まれ
-- 2014 年3月北見工業大学情報システム工学科卒
-- 2017 年3月北海道大学理学院数学専攻修士課程を修了
-- 同年インタープリズム株式会社入社
-- 現在に至る
-
+-   1991 年 10 月 7 日、北海道生まれ
+-   2014 年 3 月北見工業大学情報システム工学科卒
+-   2017 年 3 月北海道大学理学院数学専攻修士課程を修了
+-   同年インタープリズム株式会社入社
+-   現在に至る
 
 <style>
 h1 {
@@ -70,8 +69,7 @@ SQL Server, MySQL
 
 .NET, ASP.NET, Laravel, D3.js, Vue.js React, Next.js... etc
 
-
-***直近はNext.jsでPHP製のWebサービスの共通化、リプレースを担当***
+**_直近は Next.js で 元 PHP 製の Web サービスの共通化、リプレースを担当_**
 
 ---
 
@@ -79,9 +77,10 @@ SQL Server, MySQL
 
 業務以外にブラウザの拡張機能や Slack, discord の bot など同僚や同じ仕事をしている人に少し楽になるようなものを目指していくつかコードを書いてきました。いくつかを紹介します。
 
-- レビュー依頼用 Slack アプリ
-- 社内チャットでシンタックスハイライト表示ができるようになる chrome 拡張
-- discord の voice channel で話した人を text channel に記録する bot
+-   レビュー依頼用 Slack アプリ
+-   社内チャットでシンタックスハイライト表示ができるようになる chrome 拡張
+-   discord の voice channel で話した人を text channel に記録する bot
+-   Google Meet のチャットを保存する chrome 拡張
 
 ---
 
@@ -98,6 +97,7 @@ SQL Server, MySQL
 タイトル、内容、通知したい相手を選んで送る。
 
 するとチャンネルに入力した内容でメッセージが送信され、メンションされるのでレビュアーはレビューされたことが認識出来ます。
+
 </div>
 </div>
 
@@ -144,14 +144,12 @@ Slack 等になれていると少し辛いが、チームで使用している�
 
 ---
 
-
 # discord bot
 
-discord を普段の連絡で使用しており、voice channel にちょっとした離席時に誰かが話しかけてきた場合、それに気づくことができません。そこで以下のようなbotを作りました。
+discord を普段の連絡で使用しており、voice channel にちょっとした離席時に誰かが話しかけてきた場合、それに気づくことができません。そこで以下のような bot を作りました。
 
-- text channel に voice channel を登録
-- その voice channel で誰かが mic の mute を ON にした場合に text channel に通知を送る
-
+-   text channel に voice channel を登録
+-   その voice channel で誰かが mic の mute を ON にした場合に text channel に通知を送る
 
 <style>
 video {
@@ -167,18 +165,30 @@ margin: 0 auto;
   class="abs-br m-6 text-xl icon-btn opacity-50 !border-none !hover:text-white">
 <carbon-logo-github />
 </a>
+
+---
+
+# Google Meet のチャットを保存する chrome 拡張
+
+ちょっとした URL などチャットで共有したものを後で見返したいことがあり作りました。
+[Link](https://chrome.google.com/webstore/detail/meetchatlogger/ijhffeahfngojfmkdoleghdbgeebknko)
+
+<img border="rounded" width="600" src="/meet.png" style="display: block; margin-left: auto; margin-right:auto">
+
 ---
 
 # その他
 
-- 社内の技術ブログに寄稿
-    - http://interprism.hatenablog.com/entry/2021/05/14/094339
-- ハッカソンに参加
-    - 2019年10月5日にサポーターズCoLabさん主催のビアッカソンというハッカソンイベントに参加
-    - 良いメンバーと出会えて優勝出来た
-    - https://note.com/spzcolab/n/n1ef7ae944fe0
-- OSS活動
-    - PHP製のSQLパーサーがコメントありのパースしたものからSQLが生成出来ないため、コメントを除くオプションを追加
-    - 放置されている。。。
-    - https://github.com/greenlion/PHP-SQL-Parser/pull/330
-
+-   zenn に投稿
+    -   https://zenn.dev/shu1007
+-   社内の技術ブログに寄稿
+    -   http://interprism.hatenablog.com/entry/2021/05/14/094339
+    -   https://interprism.hatenablog.com/entry/2021/11/17/102710
+-   ハッカソンに参加
+    -   2019 年 10 月 5 日にサポーターズ CoLab さん主催のビアッカソンというハッカソンイベントに参加
+    -   良いメンバーと出会えて優勝出来た
+    -   https://note.com/spzcolab/n/n1ef7ae944fe0
+-   OSS 活動
+    -   PHP 製の SQL パーサーがコメントありのパースしたものから SQL が生成出来ないため、コメントを除くオプションを追加
+    -   放置されている。。。
+    -   https://github.com/greenlion/PHP-SQL-Parser/pull/330
